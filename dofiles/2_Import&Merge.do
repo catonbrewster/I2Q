@@ -18,9 +18,8 @@ tempfile access baseline dashboard noshows stickK
 ***************************************************
 **1. Set Globals
 ***************************************************
-cd X:\Dropbox\I2Q\08_Data\dofiles
-do 1_globals.do
-
+c data
+do dofiles/1_globals.do
 
 ***************************************************
 **2. Import Data annd prep it 

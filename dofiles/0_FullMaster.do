@@ -7,6 +7,10 @@ Purpose: This dofile runs all of the dofiles in the folder--getting the data fro
 its raw form to its merged and clean form, ready for analysis. 
 */
 
+*******************************UPDATE BEFORE RUNNING****************************
+global date 121815
+global user cbrewster
+
+********************************************************************************
+
 do 1_globals //setting globals
-
-

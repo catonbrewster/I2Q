@@ -9,20 +9,31 @@ on the participants.  This dofile runs the dofiles to import,
 merge, rename PII date, do HFCs on the PII data, and then strip the data of PII.
 */
 
+cap ssc install fastcd 
+
+cap cd "X:\Dropbox\I2Q\08_Data"
+if _rc {						
+	cd "/Volumes/Boxcryptor/Dropbox/I2Q/08_Data" 		//on macs 
+	}
+
+
+cap c cur data
+
+******BEFORE RUNNING OPEN 1_globals AND UPDATE USERNAME AND DATE!!!**************
+
 do 1_globals //setting globals
 
 **Import & Merge
-do 2_Import&Merge
+do "$dofiles/2_Import&Merge"
 
 **Check Baseline Double Entires 
-do 3_CheckBaselineDoubles
+do "$dofiles/3_CheckBaselineDoubles"
 
 **Rename PII data
-do 4_RenamePIIData
+do "$dofiles/4_RenamePIIData"
 
 **HFCS
-do 5_HFCs
+do "$dofiles/5_HFCs"
 
 **Strip PII and save
-do 
 

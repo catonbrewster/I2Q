@@ -16,8 +16,8 @@ set maxvar 32767	// Stata's max var limit
 ***************************************************
 **1. Set Globals
 ***************************************************
-cd X:\Dropbox\I2Q\08_Data\dofiles
-do 1_globals.do
+c data
+do dofiles/1_globals.do
 
 use "$rawdtaPII/CHCI/Baseline/RawBaseline_$date", clear
 ***************************************************
